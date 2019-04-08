@@ -12,8 +12,10 @@ On définit tout d'abord une position de base au défenseur par la propriété d
 Si la balle arrive sur sa motié de terrain, le défenseur se déplace vers celle-ci à l'aide de la propriété balleamelioree.
 Enfin, s'il réussit à obtenir la balle, il fait la passe à son coéquipier le plus proche.
 
+
 Question 4:
 J'ai utilisé la stratégie d'attaque Attaquant2 et la stratégie de défense Défense. La stratégie de défense peut dans ce cas bien fonctionner car si le défenseur est seul, il prend si nécessaire le rôle d'attaquant.
+
 
 Question 5:
 Pour le 2v2, j'ai décidé d'implémenter une nouvelle stratégie d'attaque nommée Attaque2. Celle-ci se défnit ainsi : si le joueur a la balle et qu'il a un coequipier proche des filets, il lui envoie la balle sinon, il tire.
