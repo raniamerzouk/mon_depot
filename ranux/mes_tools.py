@@ -374,9 +374,29 @@ class SuperState(object):
         if self.id_team == 1:
             return Vector2D(GAME_WIDTH-1,GAME_HEIGHT-1)
         return Vector2D(1,GAME_HEIGHT-1)
-        
+    
+    @property
+    def envoyer_loin(self):
+        x_adv = self.adv_loin.x
+        y_adv = self.adv_loin.y
+        tir = Vector2D((x_adv+self.lance_max.x)/2, (y_adv+self.lance_max.y)/2)
+        return tir
+            
+    
+    @property
+    def posd_volley(self):
+        if self.id_team == 1:
+            pos = Vector2D((GAME_WIDTH/2) - 10, GAME_HEIGHT/2.)
+        else:
+            pos = Vector2D((GAME_WIDTH/2) + 10, GAME_HEIGHT/2.)
+            
+        return pos
 
-
+    @property
+    def coeq_prochefilets(self):
+        if self.id_team == 2:
+            return self.player.x <= self.posd_volley.x
+        return self.player.x >= self.posd_volley.x
 
 
 

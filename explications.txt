@@ -1,0 +1,20 @@
+Question 2:
+Pour lancer la balle le plus loin, on procède de la manière suivante:
+- on détérmine t, la position maximale où on peut lancer la balle (i.e. pour ne pas dépasser les limites du terrain) grâce à la propriété lance_max de SuperState
+- x est la position de base du défenseur (j'ai choisi de le placer entre l'attaquant et les filets) déterminée par la propriété posd_volley
+- a est le coefficient directeur de la droite où passent les points de l'adversaire le plus élogné et de t respectivement
+- b est une constante choisie aléatoirement
+- enfin, pos est la position où l'attaquant veut tirer
+ 
+
+Question 3:
+On définit tout d'abord une position de base au défenseur par la propriété de SuperState posd_volley. Celle-ci renvoie un Vector2D différent selon qu'il s'agit de l'équipê 1 ou de l'équipe 2. J'ai décidé de placer le défenseur entre l'attaquant et le filet pour qu'il puisse facilement intercepter la balle.
+Si la balle arrive sur sa motié de terrain, le défenseur se déplace vers celle-ci à l'aide de la propriété balleamelioree.
+Enfin, s'il réussit à obtenir la balle, il fait la passe à son coéquipier le plus proche.
+
+Question 4:
+J'ai utilisé la stratégie d'attaque Attaquant2 et la stratégie de défense Défense. La stratégie de défense peut dans ce cas bien fonctionner car si le défenseur est seul, il prend si nécessaire le rôle d'attaquant.
+
+Question 5:
+Pour le 2v2, j'ai décidé d'implémenter une nouvelle stratégie d'attaque nommée Attaque2. Celle-ci se défnit ainsi : si le joueur a la balle et qu'il a un coequipier proche des filets, il lui envoie la balle sinon, il tire.
+S'il n'a pas la balle, il se contente de se déplacer vers elle.

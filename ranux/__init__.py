@@ -10,7 +10,7 @@ from soccersimulator import Strategy, SoccerAction, Vector2D, SoccerTeam, Simula
 from .strat import *
 
 def get_team(nb_players):
-    team = SoccerTeam (name = "Fatema & Rania")
+    team = SoccerTeam (name = "hop")
     if nb_players == 1:
         team.add("joueur 1", Attaque())
     if nb_players == 2:
